@@ -1,19 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    int A, B, R;
+    int A, B, R;  // Déclaration des variables
 
-    printf("Entrez deux entiers positifs : ");
-    scanf("%d %d", &A, &B);
+    // Saisie des deux nombres
+    printf("Donner le premier nombre A : ");
+    scanf("%d", &A);
 
-    // Algorithme d’Euclide
-    while (b != 0) {
-        R = A % B;
-        A = B;
-        B = R;
+    printf("Donner le deuxième nombre B : ");
+    scanf("%d", &B);
+
+    printf("\nDébut du calcul du PGCD\n\n");
+
+    // Boucle de l'algorithme d'Euclide
+    while (B != 0) {
+        R = A % B;   // Calcul du reste
+        printf("A = %d, B = %d, reste = %d\n", A, B, R);  // Affichage des valeurs à chaque étape
+
+        A = B;       // On remplace A par B
+        B = R;       // On remplace B par le reste
     }
 
-    printf("Le PGCD est : %d\n", A);
+    // Fin de la boucle
+    printf("\nLe PGCD est : %d\n", A);
 
     return 0;
 }
